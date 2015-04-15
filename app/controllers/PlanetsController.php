@@ -8,8 +8,7 @@ class PlanetsController extends \BaseController
      *
      * @return \Illuminate\View\View
      */
-    public function create()
-    {
+    public function create() {
         $user = Auth::user();
 
         if (!$user) {
@@ -21,7 +20,6 @@ class PlanetsController extends \BaseController
             return View::make('errors/error', array('error' => $error));
         }
         $planet = null;
-
         return View::make('planets/add', array('planet' => $planet));
     }
 
@@ -30,8 +28,7 @@ class PlanetsController extends \BaseController
      *
      * @return $this|\Illuminate\Http\RedirectResponse|string
      */
-    public function store()
-    {
+    public function store() {
         $user = Auth::user();
 
         if (!$user) {
@@ -176,6 +173,6 @@ class PlanetsController extends \BaseController
         $planet->comment = $data['comment'];
         $planet->save();
 
-        return Redirect::to(action('PlanetsController@getView', array($planet->id)));
+        return Redirect::to(action('PlanetsController@show', array($planet->id)));
     }
 }

@@ -9,7 +9,9 @@
 | the IoC container for the system binding all of the various parts.
 |
 */
+
 $app = new Illuminate\Foundation\Application;
+
 /*
 |--------------------------------------------------------------------------
 | Detect The Application Environment
@@ -25,6 +27,7 @@ $env = $app->detectEnvironment(
         return getenv('APP_ENV') ? : 'local';
     }
 );
+
 /*
 |--------------------------------------------------------------------------
 | Bind Paths
@@ -35,7 +38,9 @@ $env = $app->detectEnvironment(
 | may do so within the paths.php file and they will be bound here.
 |
 */
+
 $app->bindInstallPaths(require __DIR__.'/paths.php');
+
 /*
 |--------------------------------------------------------------------------
 | Load The Application
@@ -46,9 +51,12 @@ $app->bindInstallPaths(require __DIR__.'/paths.php');
 | from the actual running of the application with a given request.
 |
 */
+
 $framework = $app['path.base'].
-    '/vendor/laravel/framework/src';
+                 '/vendor/laravel/framework/src';
+
 require $framework.'/Illuminate/Foundation/start.php';
+
 /*
 |--------------------------------------------------------------------------
 | Return The Application
@@ -59,4 +67,5 @@ require $framework.'/Illuminate/Foundation/start.php';
 | from the actual running of the application and sending responses.
 |
 */
+
 return $app;
