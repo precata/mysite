@@ -2,7 +2,7 @@
 
 return array(
 
-    'added' => 'Добавить',
+    'added' => 'Добавил',
     'anonym' => 'Аноним',
     'biome' => 'Биом',
     'coordinate_x' => 'Координата X',

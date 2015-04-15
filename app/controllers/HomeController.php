@@ -46,7 +46,6 @@ class HomeController extends BaseController
                 Session::set('_locale', $language);
             }
         }
-
         App::setLocale($language);
 
         return Redirect::action('IndexController@getIndex');

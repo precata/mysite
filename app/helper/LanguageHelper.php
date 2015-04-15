@@ -10,8 +10,14 @@ class LanguageHelper
     public static function all()
     {
         return array(
-            'en',
-            'ru',
+            [
+                'locale' => 'en',
+                'name' => 'English',
+            ],
+            [
+                'locale' => 'ru',
+                'name' => 'Русский',
+            ],
         );
     }
 
@@ -28,6 +34,16 @@ class LanguageHelper
             $language = App::getLocale();
         }
 
-        return $language;
+        $languages = self::all();
+
+        foreach ($languages as $value) {
+            if ($language == $value['locale'])
+                return $value;
+        }
+
+        return [
+            'locale' => 'ru',
+            'name' => 'Русский',
+        ];
     }
 }
