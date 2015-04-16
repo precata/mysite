@@ -1,11 +1,7 @@
 @extends('layout')
 
 @section('title')
-<<<<<<< HEAD
-    Планета удалена
-=======
     @lang('planet.title_delete')
->>>>>>> 0209a5d364eaa2acfb6ac10c71a4cef64fbb2ba0
 @stop
 
 @section('content')

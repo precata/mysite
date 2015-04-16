@@ -18,6 +18,7 @@
         <!-- Bootstrap -->
         <!--script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script-->
         <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/bootstrap-dialog.min.js"></script>
         <!--link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"-->
         <link rel="stylesheet" href="/css/bootstrap.min.css">
 
@@ -28,6 +29,9 @@
         <!--script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script-->
         <script src="/js/respond.min.js"></script>
         <!--[endif]-->
+
+        <!--mysite.js-->
+        <script src="/js/mysite.js"></script>
 
         <!-- User styles -->
         <link rel="stylesheet" href="/css/style.css">
