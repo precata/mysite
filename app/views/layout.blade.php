@@ -31,6 +31,9 @@
 
         <!-- User styles -->
         <link rel="stylesheet" href="/css/style.css">
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="/img/favicon.png">
         @yield('headExtra')
     </head>
     <body>
@@ -64,6 +67,7 @@
                                 @endforeach
                             </ul>
                         </div>
+
                     @if (!Auth::check())
                         <form class="navbar-form navbar-right" role="form" action="{{ action('UsersController@postLogin') }}" method="post">
                             <a href="/users/login" class="btn btn-success">@lang('action.login')</a>
